@@ -34,7 +34,7 @@ Trial_stream::Trial_stream()
 
 void Trial_stream::putback(Trial t)
 {
- if (full) cout <<"putback() into a full buffer";
+ if (full) cerr <<"putback() into a full buffer";
  buffer = t;
  full = true;
 }
@@ -64,7 +64,7 @@ Trial Trial_stream::get()
         return Trial('2', ys);   //'2' represent "a number"
     }
     default:
-        cout <<"Bad token";
+        cerr <<"Bad token";
     }
 }
 
@@ -83,21 +83,21 @@ int Primary() // deal with True, False and parentheses
     {
         int d = Or();
         t = tr.get();
-        if (t.kind != ')') cout << "')' expected";
+        if (t.kind != ')') cerr << "')' expected";
         return d;
     }
     case '{':
     {
         int j = Or();
         t = tr.get();
-        if (t.kind != '}') cout << "'}' expected";
+        if (t.kind != '}') cerr << "'}' expected";
         return j;
     }
     case '2':
         return t.TF;
 
     default:
-        cout << "primary expected";
+        cerr << "primary expected";
     }
 }
 
