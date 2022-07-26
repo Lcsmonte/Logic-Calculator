@@ -1,3 +1,6 @@
+// Welcome to my logic Calculator for C++
+// the Unary operator only works as Suffix
+// Normal usage !1 == 0, Program usage 1! == 0. 
 
 #include <iostream>
 
