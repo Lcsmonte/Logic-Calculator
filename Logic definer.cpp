@@ -1,4 +1,5 @@
 // Welcome to my logic Calculator for C++
+// This calculator accepts ( ! ~ & ^ | ) prioritizing as written.
 // the Unary operator only works as Suffix
 // Normal usage !1 == 0, Program usage 1! == 0. 
 
